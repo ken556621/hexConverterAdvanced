@@ -17,6 +17,10 @@ function displayNumber(showNumberField, input){
 function convertNumber(){
   hexNumber = '#';
   for(let i =0;i < rgbNumber.length;i++){
+    if(Number(rgbNumber[i].value) === 0){
+      rgbNumber[i].value = "00";
+      hexNumber += rgbNumber[i].value;
+    }
     hexNumber += Number(rgbNumber[i].value).toString(16)
   }
   hexNumberField.innerHTML = hexNumber;
@@ -27,7 +31,7 @@ function convertNumber(){
 //listen
 scrollBar.addEventListener('input', function(event){
   if(event.target.matches('.inputBar')){
-    displayNumber(event.target.nextElementSibling, event.target.value);
     convertNumber();
+    displayNumber(event.target.nextElementSibling, event.target.value);
   }
 })
