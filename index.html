@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>RGB to Hex Converter Advanced</title>
+</head>
+<body>
+  <h2>RGB to Hex Converter</h2>
+  <div class="wrapper" id="scrollBar">
+    <div class="redField">
+      <label for="red" class="redLabel">R</label>
+      <input type="range" class="inputBar" min="0" max="255" value="0">
+      <div class="showColor redNumber">
+      </div>
+    </div>
+    <div class="greenField">
+      <label for="green" class="greenLabel">G</label>
+      <input type="range" class="inputBar" min="0" max="255" value="0">
+      <div class="showColor greenNumber">
+      </div>
+    </div>
+    <div class="blueField">
+      <label for="blue" class="blueLabel">B</label>
+      <input type="range" class="inputBar" min="0" max="255" value="0">
+      <div class="showColor blueNumber">
+      </div>
+    </div>
+    <div class="hexNumber" id="hexNumberField">
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
