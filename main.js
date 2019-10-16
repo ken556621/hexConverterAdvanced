@@ -17,11 +17,11 @@ function displayNumber(showNumberField, input){
 function convertNumber(){
   hexNumber = '#';
   for(let i =0;i < rgbNumber.length;i++){
-    if(Number(rgbNumber[i].value) === 0){
-      rgbNumber[i].value = "00";
-      hexNumber += rgbNumber[i].value;
+    if(Number(rgbNumber[i].value) < 16){
+      hexNumber += "0" + Number(rgbNumber[i].value).toString(16);
+    }else{
+      hexNumber += Number(rgbNumber[i].value).toString(16);
     }
-    hexNumber += Number(rgbNumber[i].value).toString(16)
   }
   hexNumberField.innerHTML = hexNumber;
   document.body.style.backgroundColor = hexNumber;
